@@ -1,0 +1,98 @@
+@charset "UTF-8";
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 100;
+    src: url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Thin.woff2") format('woff2');
+    src: url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Thin.woff") format('woff');
+    src: url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Thin.otf") format('opentype');
+}
+  @font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 200;
+    src: url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Light.woff2") format('woff2');
+    src: url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Light.woff") format('woff');
+    src: url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Light.otf") format('opentype');
+  }
+  @font-face {
+     font-family: 'Noto Sans KR';
+     font-style: normal;
+     font-weight: 300;
+     src: url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Regular.woff2") format('woff2');
+     src: url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Regular.woff") format('woff');
+     src: url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Regular.otf") format('opentype');
+   }
+  @font-face {
+     font-family: 'Noto Sans KR';
+     font-style: normal;
+     font-weight: 500;
+     src: url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Medium.woff2") format('woff2');
+     src: url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Medium.woff") format('woff');
+     src: url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Medium.otf") format('opentype');
+   }
+  @font-face {
+     font-family: 'Noto Sans KR';
+     font-style: normal;
+     font-weight: 600;
+     src:  url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Bold.woff2") format('woff2');
+     src:  url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Bold.woff") format('woff');
+     src:  url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Bold.otf") format('opentype');
+   }
+  @font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 900;
+    src: url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Black.woff2") format('woff2');
+    src: url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Black.woff") format('woff');
+    src: url("//image.istyle24.com/Style24/ux/fonts/NotoSansKR-Black.otf") format('opentype');
+  } 
+ 
+/* lato */
+@font-face {
+    font-family: 'LATO';
+    src: 
+    url("//image.istyle24.com/Style24/ux/fonts/Lato-Light.eot") format('eot'),
+    url("//image.istyle24.com/Style24/ux/fonts/Lato-Light.woff") format('woff'),
+    url("//image.istyle24.com/Style24/ux/fonts/Lato-Light.ttf") format('ttf');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LATO';
+    src: 
+    url("//image.istyle24.com/Style24/ux/fonts/Lato-Regular.eot") format('eot'),
+    url("//image.istyle24.com/Style24/ux/fonts/Lato-Regular.woff") format('woff'),
+    url("//image.istyle24.com/Style24/ux/fonts/Lato-Regular.ttf") format('ttf');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LATO';
+    src: 
+    url("//image.istyle24.com/Style24/ux/fonts/Lato-Medium.eot") format('eot'),
+    url("//image.istyle24.com/Style24/ux/fonts/Lato-Medium.woff") format('woff'),
+    url("//image.istyle24.com/Style24/ux/fonts/Lato-Medium.ttf") format('ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LATO';
+    src: 
+    url("//image.istyle24.com/Style24/ux/fonts/Lato-Semibold.eot") format('eot'),
+    url("//image.istyle24.com/Style24/ux/fonts/Lato-Semibold.woff") format('woff'),
+    url("//image.istyle24.com/Style24/ux/fonts/Lato-Semibold.ttf") format('ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LATO';
+    src: 
+    url("//image.istyle24.com/Style24/ux/fonts/Lato-Bold.eot") format('eot'),
+    url("//image.istyle24.com/Style24/ux/fonts/Lato-Bold.woff") format('woff'),
+    url("//image.istyle24.com/Style24/ux/fonts/Lato-Bold.ttf") format('ttf');
+    font-weight: 700;
+    font-style: normal;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html style="width:100%; height:100%">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <script src="js/lib/jquery-3.1.1.min.js"></script>
+  <style>
+    span { margin-left:30px; padding:3px; font-size:14px; text-decoration:underline; cursor:pointer }
+  </style>
+  <script>
+    $(document).ready(function(){
+      var load = function() {
+        var params = {};
+        $('#_inven').children('div[name]').each(function(id1, el1){
+          params[$(el1).attr('name')] = null;
+          $(el1).children('span').each(function(id2, el2){
+            if ($(el2).attr('check') == 'on') {
+              params[$(el1).attr('name')] = $(el2).attr('val');
+              return false;
+            }
+          });
+        });
+
+        // 3DBANK CODE start
+        /*
+          [3D Viewer 모듈을 사용하여 아바타에 옷을 입히는 규칙은 아래와 같습니다.]
+
+          var params = {
+            sex: 'm',
+            top: 'data/model/clothes/11.glb',     // 상의
+            pants: 'data/model/clothes/11.glb',   // 하의
+            coat: null,                           // 외투
+            dress: null                           // 원피스
+          }
+          viewer.load_set(params);
+
+          1. index.html은 샘플 페이지이며, 차후 지워질 페이지입니다.
+          2. sex:
+             => m 혹은 f를 넣어주세요.
+          3. top, pants, coat, dress:
+             => 벗기는 경우는 null을 보내주세요.
+             => 입히는 경우는 해당 파일을 다운로드 받을 수 있는 URL(back-end download api)을 보내주세요.
+          4. 위의 예제는 상의와 하의만 입히는 방법입니다.
+          5. "viewer.load_set()" 함수가 로딩되었는지 판단하는 방식은 아래의 코드를 참조하세요.
+          6. 여기서 보여지는 것은 샘플 데이터로써 콘텐츠 파일이 부족하여 남성 파일만 있고, 옷 끼리 서로 겹치기도 하므로 TEST시 참조하세요.
+        */
+        console.log('# params', params);
+             console.log(111, params);
+        var func = function() {
+          var viewer = $('#3dviewer')[0].contentWindow.viewer;
+          if (typeof viewer == 'object' && viewer.isLoaded) {
+        	  console.log(1111)
+            viewer.load_set(params);
+          } else {
+            setTimeout(func, 100);
+          }
+        }
+        func();
+        // 3DBANK CODE end
+      }
+
+      $('span').each(function(idx, el){
+        if ($(this).attr('check') == 'on') $(this).css('background-color', '#9dcbff');
+      }).on('mouseenter', function(){
+        if ($(this).attr('check') != 'on') $(this).css('background-color', '#eee');
+      }).on('mouseleave', function(){
+        $(this).css('background-color', $(this).attr('check') == 'on' ? '#9dcbff' : 'unset');
+      }).on('click', function(){
+        if ($(this).attr('check') != 'on') {
+          switch($(this).closest('div').attr('name')) {
+            case 'sex': {
+              $('#_inven').find('[name="top"],[name="pants"],[name="coat"],[name="dress"]').children().css('background-color', 'unset').removeAttr('check');
+              break;
+            }
+            case 'top':
+            case 'pants': {
+              $('#_inven').find('[name="dress"]').children().css('background-color', 'unset').removeAttr('check');
+              break;
+            }
+            case 'dress': {
+              $('#_inven').find('[name="top"],[name="pants"]').children().css('background-color', 'unset').removeAttr('check');
+              break;
+            }
+          }
+
+          $(this).siblings().css('background-color', 'unset').removeAttr('check');
+          $(this).css('background-color', '#9dcbff').attr('check', 'on');
+          load();
+        } else if ($(this).closest('div').attr('name') != 'sex') {
+          $(this).css('background-color', 'unset').removeAttr('check');
+          load();
+        }
+      });
+
+      load();
+    });
+  </script>
+</head>
+<body style="margin:0; padding:0; width:100%; height:100%; cursor:default">
+  <div style="position:absolute; width:50%; height:100%">
+    <iframe id="3dviewer" width="100%" height="100%" frameborder="0" src="embed_viewer.html"></iframe>
+  </div>
+  <div id="_inven" style="position:absolute; margin-left:50%; padding:10px; font-size:18px">
+    <div name="sex" style="padding:10px">
+      [성별]
+      <span val="m" check="on">남성</span>
+      <span val="f">여성</span>
+    </div>
+    <div name="top" style="padding:10px">
+      [상의]
+      <span val="data/model/clothes/1.glb" check="on">상의-1</span>
+      <span val="data/model/clothes/2.glb">상의-2</span>
+    </div>
+    <div name="pants" style="padding:10px">
+      [하의]
+      <span val="data/model/clothes/11.glb" check="on">하의-1</span>
+      <span val="data/model/clothes/12.glb">하의-2</span>
+    </div>
+    <div name="coat" style="padding:10px">
+      [외투]
+      <span val="data/model/clothes/21.glb">외투-1</span>
+    </div>
+    <div name="dress" style="padding:10px">
+      [원피스]
+      <span val="data/model/clothes/31.glb">원피스-1</span>
+    </div>
+  </div>
+</body>
+</html>

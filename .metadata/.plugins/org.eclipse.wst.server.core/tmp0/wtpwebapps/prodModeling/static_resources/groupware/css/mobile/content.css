@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+.proCont { background: #fff; padding: 4vw; }
+.project { margin:0 auto; max-width:1400px;}
+.project .listbox { overflow:hidden; }
+.project .listbox .topbox { position:relative; }
+.project .listbox .topbox .tit { font-weight: 300;
+    font-size: 22px; 
+    letter-spacing: -0.025em;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    color: #333;}
+.project .listbox .topbox .tit:after {content:""; display:block; position:absolute; left:0; bottom:0; width:100%; height:1px; background-color:#123867; }
+.project .listbox .topbox .tit strong { opacity:0; font-weight:400; display:block; }
+
+.project .listbox dl { margin:30px 0 0; display: flex;}
+.project .listbox dl:after {content:""; display:block; visibility:hidden; clear:both; height:0; }
+.project .listbox dt { opacity:1; width:32%; float:left; }
+.project .listbox dt strong { position:relative; display:inline-block; color:#333; font-weight:500; }
+.project .listbox dt .txt { position:relative;  margin:2vw 0 0 0; display:block;  letter-spacing:-0.025em; word-break: break-all;}
+
+
+
+
+.listbox .b_contbox .txtbox .txt_link { position:relative; margin:20px 0 0 0; }
+.listbox .b_contbox .txtbox .txt_link p { font-size: 28px; color: #333; width: 100%; margin-bottom: 20px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; font-weight: 700; letter-spacing: -0.025em; }
+.listbox .b_contbox .txtbox .txt_date { position:relative; margin:20px 0 0 0; }
+.listbox .b_contbox .txtbox .txt_date p { font-weight:300; font-size:20px;  }
+
+.listbox .b_contbox .txtbox .txt_link a.btn { position:absolute; right:0; top:0; display:inline-block; width:130px; height: 45px; font-weight:400; font-size:16px; color:#fff; text-align: center; padding-left: 20px; letter-spacing:-0.025em; }
+.listbox .b_contbox .txtbox .txt_link a.btn span { position: relative; display: block; height: 100%; display: flex; align-items: center; }
+.listbox .b_contbox .txtbox .txt_link a.btn span:after {content:""; display:block; position:absolute; right:0; top:0; width:50px; height:45px; transition:all .3s ease-in-out; background:url(/static_resources/home/image/about/btn_more_b.png) left center no-repeat;} 
+.listbox .b_contbox .txtbox .txt_link a.btn:hover span:after { background:url(/static_resources/home/image/about/btn_more_b_on.png) left center no-repeat; } 
+.listbox .b_contbox .txtbox .txt_link a.btn:before {content:""; display:block; position:absolute; left:0; bottom:0; width:100%; height:100%; background-color:#123867; transition:all .3s ease-in-out; }
+.listbox .b_contbox .txtbox .txt_link a.btn:after {content:""; display:block; position:absolute; left:0; bottom:0; width:0; height:100%; background-color:rgb(242 248 255 / 50%); transition:all .3s ease-in-out; }
+.listbox .b_contbox .txtbox .txt_link a.btn:hover:after {width:100%; }
+
+.listbox .b_contbox .txtbox .txt_links { position:relative; display: flex; justify-content: flex-end; }
+.listbox .b_contbox .txtbox .txt_links a.btn { position: relative; right:0; top:0; display:inline-block; width:130px; height: 45px; font-weight:400; font-size:16px; color:#fff; text-align: center; padding-left: 20px; letter-spacing:-0.025em; }
+.listbox .b_contbox .txtbox .txt_links a.btn span { position: relative; display: block; height: 100%; display: flex; align-items: center; }
+.listbox .b_contbox .txtbox .txt_links a.btn span:after {content:""; display:block; position:absolute; right:0; top:0; width:50px; height:45px; transition:all .3s ease-in-out; background:url(/static_resources/home/image/about/btn_more_b.png) left center no-repeat;} 
+.listbox .b_contbox .txtbox .txt_links a.btn:hover span:after { background:url(/static_resources/home/image/about/btn_more_b_on.png) left center no-repeat; } 
+.listbox .b_contbox .txtbox .txt_links a.btn:before {content:""; display:block; position:absolute; left:0; bottom:0; width:100%; height:100%; background-color:#123867; transition:all .3s ease-in-out; }
+.listbox .b_contbox .txtbox .txt_links a.btn:after {content:""; display:block; position:absolute; left:0; bottom:0; width:0; height:100%; background-color:rgb(242 248 255 / 50%); transition:all .3s ease-in-out; }
+.listbox .b_contbox .txtbox .txt_links a.btn:hover:after {width:100%; }
+
+
+
+.accordion { display: inline-block; position: relative; left: 50%; width: 100%; transform: translate(-50%, 0); padding: 30px 0 0 0; }
+.accordion h1 {text-transform: uppercase; font-size: 36px;line-height: 42px;letter-spacing: 3px;font-weight: 100;}
+.accordion h2 { font-weight: 300; display: block; color: #333; font-weight: 500; margin: 0; cursor: pointer; }
+.accordion p { position: relative;	overflow: hidden; opacity: 1;	transform: translate(0, 0); margin-top: 14px; padding: 1.5vw 0; word-break: break-all; }
+.accordion p span{ background: #f4f4f4; margin-left: 3vw; }
+.accordion ul { list-style: none; perspective: 900; padding: 0; margin: 0; }
+.accordion ul li { position: relative; padding: 0; margin: 0; padding-bottom: 2vw; padding-top: 4vw; border-top: 1px solid #dce7eb; }
+.accordion ul li:nth-of-type(1) { animation-delay: 1s; }
+.accordion ul li:nth-of-type(2) { animation-delay: 0.75s; }
+.accordion ul li:nth-of-type(3) { animation-delay: 1s; }
+.accordion ul li:last-of-type { padding-bottom: 0; }
+.accordion ul li i { position: absolute; transform: translate(-30px, 0); right: 0; margin-top: -4vw; }
+.accordion ul li i:before, .accordion ul li i:after { content: ""; position: absolute; background-color: #123867; width: 6px; height: 25px;}
+.accordion ul li i:before { transform: translate(15px, 0) rotate(45deg); }
+.accordion ul li i:after { transform: translate(0px, 0) rotate(-45deg); }
+
+.accordion ul li input[type=checkbox] { position: absolute; cursor: pointer; width: 100%; height: 100%; z-index: 1; opacity: 0; margin-top: -2vw; }
+.accordion ul li input[type=checkbox]:checked ~ p, .accordion ul li input[type=checkbox]:checked ~ span {
+  margin-top: 0;
+  max-height: 0;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
+
+.accordion ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(0px, 0) rotate(45deg);
+}
+.accordion ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-16px, 0) rotate(-45deg);
+}
+
+
+/* animation */ 
+.listbox.on .title { animation:ani_1 1.0s 0.3s; animation-fill-mode:both; }
+.listbox.on:nth-of-type(2n) .title { animation:ani_2 1.0s 0.3s; animation-fill-mode:both; }
+.listbox.on .b_contbox .txtbox .sbox .tit { animation:ani_3 1.0s 0.3s; animation-fill-mode:both; }
+.listbox.on .b_contbox .txtbox .txt_date p { animation:ani_2 1.0s 0.6s; animation-fill-mode:both; }
+.listbox.on .b_contbox .txtbox .txt_link p { animation:ani_2 1.0s 0.6s; animation-fill-mode:both; }
+.listbox.on .b_contbox .txtbox .txt_link a.btn { animation:ani_1 1.0s 0.6s; animation-fill-mode:both; }
+.listbox.on .b_contbox .txtbox .txt_links p { animation:ani_2 1.0s 0.6s; animation-fill-mode:both; }
+.listbox.on .b_contbox .txtbox .txt_links a.btn { animation:ani_1 1.0s 0.6s; animation-fill-mode:both; }
+.listbox.on .b_contbox .txtbox .txt { animation:ani_2 1.0s 0.9s; animation-fill-mode:both; }
+
+.listbox.on .b_contbox .txtbox .txt_links p { animation:ani_2 1.0s 0.6s; animation-fill-mode:both; }
+.listbox.on .b_contbox .txtbox .txt_links a.btn { animation:ani_1 1.0s 0.6s; animation-fill-mode:both; }
+.listbox.on .b_contbox .txtbox .txt { animation:ani_2 1.0s 0.9s; animation-fill-mode:both; }
+
+.listbox.on:nth-of-type(2n) .b_contbox .txtbox .txt { animation:ani_1 1.0s 0.9s; animation-fill-mode:both; }
+.listbox.on .b_contbox .txtbox .txt_b { animation:ani_3 1.0s 1.2s; animation-fill-mode:both; }
+.listbox.on .b_contbox .imgbox img {  animation:bg_over 2s 0.3s; animation-fill-mode:both; }
+
+@keyframes bg_over {
+	0%{transform:scale(1.2); }
+	100%{transform:scale(1); }
+}
+
+
+/* animation */ 
+.project .listbox.on .topbox .tit strong { animation:ani_3 1.0s 0.3s; animation-fill-mode:both; }
+.project .listbox.on dl:nth-of-type(1) dt { animation:ani_1 1.0s 0.3s; animation-fill-mode:both; }
+.project .listbox.on dl:nth-of-type(2) dt { animation:ani_1 1.0s 0.6s; animation-fill-mode:both; }
+.project .listbox.on dl:nth-of-type(3) dt { animation:ani_1 1.0s 0.9s; animation-fill-mode:both; }
+.project .listbox.on dl:nth-of-type(4) dt { animation:ani_1 1.0s 1.2s; animation-fill-mode:both; }
+.project .listbox.on dl:nth-of-type(1) dd { animation:ani_2 1.0s 0.3s; animation-fill-mode:both; }
+.project .listbox.on dl:nth-of-type(2) dd { opacity:1; }
+.project .listbox.on dl:nth-of-type(3) dd { animation:ani_2 1.0s 0.9s; animation-fill-mode:both; }
+.project .listbox.on dl:nth-of-type(4) dd { animation:ani_2 1.0s 1.2s; animation-fill-mode:both; }
+.project .listbox.on .imgbox:before { width:0; transition:width 1.0s 0.8s; }
+
+
+.row-con.mo {  }
+.btn_wrap.mo {
+	    width: 100%;
+}
+.btn.mo { width: 50%;     height: 12.5vw;
+    border-radius: 2vw; } 
+
+.btn.mo > span { font-size: 4.5vw; }
+
+
+
+
+
+
